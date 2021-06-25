@@ -12,6 +12,7 @@ namespace TicTakToeWF
 {
     public partial class КрестикиНолики : Form
     {
+        bool gameStarted;
         bool xTurn = true;
         public КрестикиНолики()
         {
@@ -40,6 +41,7 @@ namespace TicTakToeWF
                             //обозначает инвертированное значение
                             //, то есть ( true = !true )==( true = false )
             senderB.Enabled = false;
+            gameStarted = true;
             CheckWin(senderB);
         }
         void CheckWin(Button pressedButton)
@@ -49,7 +51,7 @@ namespace TicTakToeWF
                 MessageBox.Show("Победили " + pressedButton.Text);
                 Application.Restart();
             }
-            if (button4.Text == button5.Text && button5.Text == button6.Text && button2.Enabled == false)
+            if (button4.Text == button5.Text && button5.Text == button6.Text && button6.Enabled == false)
             {
                 MessageBox.Show("Победили " + pressedButton.Text);
                 Application.Restart();
@@ -85,6 +87,32 @@ namespace TicTakToeWF
                 Application.Restart();
             }
             
+        }
+
+        private void chosseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void restartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
+        private void xToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!gameStarted)
+            {
+                xTurn = true;
+            }
+        }
+
+        private void oToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!gameStarted)
+            {
+                xTurn = false;
+            }
         }
     }
 }

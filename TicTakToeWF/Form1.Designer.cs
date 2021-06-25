@@ -38,6 +38,13 @@ namespace TicTakToeWF
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chosseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.oToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -45,7 +52,7 @@ namespace TicTakToeWF
             this.button1.BackColor = System.Drawing.Color.Orange;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(13, 30);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 85);
             this.button1.TabIndex = 0;
@@ -57,7 +64,7 @@ namespace TicTakToeWF
             this.button2.BackColor = System.Drawing.Color.Orange;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(103, 12);
+            this.button2.Location = new System.Drawing.Point(104, 30);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(88, 85);
             this.button2.TabIndex = 1;
@@ -69,7 +76,7 @@ namespace TicTakToeWF
             this.button3.BackColor = System.Drawing.Color.Orange;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(194, 12);
+            this.button3.Location = new System.Drawing.Point(195, 30);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(88, 85);
             this.button3.TabIndex = 2;
@@ -81,7 +88,7 @@ namespace TicTakToeWF
             this.button4.BackColor = System.Drawing.Color.Orange;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(12, 103);
+            this.button4.Location = new System.Drawing.Point(13, 121);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(88, 85);
             this.button4.TabIndex = 3;
@@ -93,7 +100,7 @@ namespace TicTakToeWF
             this.button5.BackColor = System.Drawing.Color.Orange;
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(103, 103);
+            this.button5.Location = new System.Drawing.Point(104, 121);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(88, 85);
             this.button5.TabIndex = 4;
@@ -105,7 +112,7 @@ namespace TicTakToeWF
             this.button6.BackColor = System.Drawing.Color.Orange;
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(194, 103);
+            this.button6.Location = new System.Drawing.Point(195, 121);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(88, 85);
             this.button6.TabIndex = 5;
@@ -117,7 +124,7 @@ namespace TicTakToeWF
             this.button7.BackColor = System.Drawing.Color.Orange;
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(12, 194);
+            this.button7.Location = new System.Drawing.Point(13, 212);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(88, 85);
             this.button7.TabIndex = 6;
@@ -129,7 +136,7 @@ namespace TicTakToeWF
             this.button8.BackColor = System.Drawing.Color.Orange;
             this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(103, 194);
+            this.button8.Location = new System.Drawing.Point(104, 212);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(88, 85);
             this.button8.TabIndex = 7;
@@ -141,18 +148,68 @@ namespace TicTakToeWF
             this.button9.BackColor = System.Drawing.Color.Orange;
             this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(194, 194);
+            this.button9.Location = new System.Drawing.Point(195, 212);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(88, 85);
             this.button9.TabIndex = 8;
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button1_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gameToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(302, 24);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // gameToolStripMenuItem
+            // 
+            this.gameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.chosseToolStripMenuItem,
+            this.restartToolStripMenuItem});
+            this.gameToolStripMenuItem.Name = "gameToolStripMenuItem";
+            this.gameToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.gameToolStripMenuItem.Text = "Game";
+            // 
+            // chosseToolStripMenuItem
+            // 
+            this.chosseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.xToolStripMenuItem,
+            this.oToolStripMenuItem});
+            this.chosseToolStripMenuItem.Name = "chosseToolStripMenuItem";
+            this.chosseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.chosseToolStripMenuItem.Text = "ChoosePlayer";
+            this.chosseToolStripMenuItem.Click += new System.EventHandler(this.chosseToolStripMenuItem_Click);
+            // 
+            // restartToolStripMenuItem
+            // 
+            this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
+            this.restartToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.restartToolStripMenuItem.Text = "Restart";
+            this.restartToolStripMenuItem.Click += new System.EventHandler(this.restartToolStripMenuItem_Click);
+            // 
+            // xToolStripMenuItem
+            // 
+            this.xToolStripMenuItem.Name = "xToolStripMenuItem";
+            this.xToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.xToolStripMenuItem.Text = "X";
+            this.xToolStripMenuItem.Click += new System.EventHandler(this.xToolStripMenuItem_Click);
+            // 
+            // oToolStripMenuItem
+            // 
+            this.oToolStripMenuItem.Name = "oToolStripMenuItem";
+            this.oToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.oToolStripMenuItem.Text = "O";
+            this.oToolStripMenuItem.Click += new System.EventHandler(this.oToolStripMenuItem_Click);
+            // 
             // КрестикиНолики
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 298);
+            this.ClientSize = new System.Drawing.Size(302, 313);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
@@ -162,10 +219,15 @@ namespace TicTakToeWF
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "КрестикиНолики";
             this.Text = "КрестикиНолики";
             this.Load += new System.EventHandler(this.КрестикиНолики_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -180,6 +242,12 @@ namespace TicTakToeWF
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem gameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chosseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem oToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem restartToolStripMenuItem;
     }
 }
 
